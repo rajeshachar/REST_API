@@ -16,49 +16,54 @@
     <div class="container">
         <div class="title">Registration Form</div>
         <div class="content">
-            
+
             <form action="/register" method="POST">
                 <div class="user-details">
                     <div class="input-box">
                         <span class="details">Full Name</span>
-                        <input type="text" name="fname" placeholder="Enter your full name">
-                            
+                        <input type="text" name="fname" placeholder="Enter your full name"
+                            value="{{employee.fullname}}">
+
                         <div claas="text-danger" style="color: #FF0000;">
                             {{employee.fullNameError}}
                         </div>
                     </div>
                     <div class="input-box">
                         <span class="details">User Name</span>
-                        <input type="text" name="uname" placeholder="Enter your user name">
-                            
+                        <input type="text" name="uname" placeholder="Enter your user name"
+                            value="{{employee.username}}">
+
                         <div claas="text-danger" style="color: #FF0000;">
                             {{employee.userNameError}}
                         </div>
                     </div>
                     <div class="input-box">
                         <span class="details">Email</span>
-                        <input type="text" name="email" placeholder="Enter your email" >
+                        <input type="text" name="email" placeholder="Enter your email" value="{{employee.email}}">
                         <div claas="text-danger" style="color: #FF0000;">
                             {{employee.emailError}}
                         </div>
                     </div>
                     <div class="input-box">
                         <span class="details">Phone Number</span>
-                        <input type="number" name="phone" placeholder="Enter your phone number">
+                        <input type="number" name="phone" placeholder="Enter your phone number"
+                            value="{{employee.phone}}">
                         <div claas="text-danger" style="color: #FF0000;">
                             {{employee.phoneError}}
                         </div>
                     </div>
                     <div class="input-box">
                         <span class="details">Password</span>
-                        <input type="password" name="pwd" placeholder="Enter your password">
+                        <input type="password" name="pwd" placeholder="Enter your password"
+                            value="{{employee.password}}">
                         <div claas="text-danger" style="color: #FF0000;">
                             {{employee.pwdError}}
                         </div>
                     </div>
                     <div class="input-box">
                         <span class="details">Confirm Password</span>
-                        <input type="password" name="cpwd" placeholder="Enter your confirm password">    
+                        <input type="password" name="cpwd" placeholder="Enter your confirm password"
+                            value="{{employee.confirmpassword}}">
                         <div claas="text-danger" style="color: #FF0000;">
                             {{employee.cpwdError}}
                         </div>
@@ -92,11 +97,8 @@
                 </div>
                 <a class="go" style="text-decoration: none;" href="/">Go Home</a>
             </form>
-        
         </div>
     </div>
     </div>
-
 </body>
-
 </html>
