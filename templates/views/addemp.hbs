@@ -1,0 +1,120 @@
+
+<head>
+  {{>ahome_header}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+
+<style>
+
+</style>
+
+</head>
+ 
+  <title>Administrator page</title>
+  
+    
+<body style="background-image: url('images/a1.jpg');height: 100vh; 
+background-position: center; 
+background-repeat: no-repeat; 
+background-size: cover;">
+
+
+
+
+<form action="/addorup" method="POST" >
+<input type="hidden" name="_id" value="{{employee._id}}">
+<fieldset >
+  
+  <h1 style="text-align:center;">{{vtitle}} Employee Details</h1>
+       <div class="input-box">
+            <div class="input-container">
+                 <i class="fa fa-user icon"></i> 
+               
+                <input class="input-field" type="text" placeholder="Enter your Full Name" name="fname" value="{{employee.fullname}}" >
+            </div>
+            <div class="text-danger" style="color: #FF0000; margin-left: 50px;">
+                {{employee.fullNameError}}
+            </div>
+      </div>
+    <diV class="input-box">
+           <div class="input-container">
+                <i class="fa fa-user icon"></i>
+                <input class="input-field" type="text" placeholder="Enter your Username" name="uname" value="{{employee.username}}" >
+            </div>
+            <div class="text-danger" style="color: #FF0000; margin-left: 50px;">
+                {{employee.userNameError}}
+            </div>
+    </diV>  
+    <div class="input-box">
+           <div class="input-container">
+              <i class="fa fa-envelope icon"></i>
+              <input class="input-field" type="email" placeholder="Enter your email" name="email"  value="{{employee.email}}" >
+           </div>
+           <div class="text-danger" style="color: #FF0000; margin-left: 50px;">
+                {{employee.emailError}}
+            </div>
+    </div>
+    <div class="input-box">
+          <div class="input-container">
+              <i class="fa fa-phone icon"></i>
+              <input class="input-field" type="number" placeholder="Enter your phone number" name="phone" value="{{employee.phone}}" >
+          </div>
+          <div class="text-danger" style="color: #FF0000; margin-left: 50px;">
+                {{employee.phoneError}}
+            </div>
+    </div>
+    <div class="input-box">
+              <div class="input-container">
+                          <label class="font"><b>Gender: </b></label>
+                          <div class="form-check">
+                          <input class="form-check-input" type="radio" name="gender" id="r1" value="Male" [(ngModel)]="gender">
+                          <label class="form-check-label" for="r1">
+                          <b>Male</b> 
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="gender" id="r2" value="Female" [(ngModel)]="gender">
+                          <label class="form-check-label" for="r2">
+                          <b>Female</b> 
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="gender" id="r3" value="Other" [(ngModel)]="gender">
+                          <label class="form-check-label" for="r3">
+                          <b>Other</b> 
+                          </label>
+                        </div>
+              </div>
+              <div class="text-danger" style="color: #FF0000; margin-left: 50px;">
+                {{employee.genderError}}
+            </div>
+    </div>
+    <div class="input-box">
+              <div class="input-container">
+                      <i class="fa fa-key icon"></i>
+                      <input class="input-field" type="password" placeholder="Enter your Password" name="pwd" value="{{employee.password}}" >
+              </div>
+              <div class="text-danger" style="color: #FF0000; margin-left: 50px;">
+                {{employee.pwdError}}
+            </div>
+    </div>
+    <div class="input-box">
+              <div class="input-container">
+                  <i class="fa fa-key icon"></i>
+                  <input class="input-field" type="password" placeholder="Enter your Confirm Password" name="cpwd" value="{{employee.confirmpassword}}" >
+              </div>
+              <div class="text-danger" style="color: #FF0000; margin-left: 50px;">
+                {{employee.cpwdError}}
+            </div>
+    </div>
+  
+  
+  <br>
+  <h2><a class="bttn btn-primary" href="/ahome"><i class="fa fa-home"></i> Home</a>
+  <button type="submit" class="btn"><i class="fa fa-database"></i><b> {{b}}</b></button>
+  <a class="btn b" href="/emplog"><i class="fa fa-list-alt"></i><b> View All</b></a></h2>
+  
+</fieldset>
+</form>
+</body>

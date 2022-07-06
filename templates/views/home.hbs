@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>home_header}}
+    <title>Home page</title>
+    <style>
+      .container{
+        margin-left:220px;
+        margin right:100px;
+      }
+    </style>
+</head>
+<body style="background-image: url('images/home.jpg'); 
+height: 100vh; 
+background-position: center; 
+background-repeat: no-repeat; 
+background-size: cover; ">
+    <header class="header">
+        <nav class="navbar navbar-style">
+          <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#micon">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+
+                <a class="navbar-brand"><img class="logo" src="images/logo.png"></a>
+                <a class="navbar-brand"><b>Eagle Enterprise</b></a>
+            </div>
+            <div class="collapse navbar-collapse"id="micon">
+            <div class="sidebar " >
+                <a class="active" href="#home">Home</a>
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+              </div>
+            
+            
+          
+           
+            <ul class="nav navbar-nav navbar-right">
+              <li> 
+                  <form class="abc navbar-form navbar-left" action="/action_page.php">
+                            <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="search">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        </div>
+                </form>
+              </li>
+            
+              <li><a href="/"><span class="glyphicon glyphicon-log-in"></span> Sign Out</a></li>
+            </ul> 
+            
+            </div>
+          </div>
+          </div>
+        </nav>
+        <div class='container'>
+
+          <marquee><h2><b>Hi {{un}}!!!....Welcome to your Dashboard</b></h2></marquee>
+        </div>
+      
+</body>
+</html>

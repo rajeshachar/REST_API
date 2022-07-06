@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    {{>reg_header}}
+    <title>Registration Form</title>
+    <style>
+
+    </style>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Registration Form</div>
+        <div class="content">
+            
+            <form action="/register" method="POST">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input type="text" name="fname" placeholder="Enter your full name"
+                            value="{{employee.fullname}}">
+                        <div claas="text-danger" style="color: #FF0000;">
+                            {{employee.fullNameError}}
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">User Name</span>
+                        <input type="text" name="uname" placeholder="Enter your user name"
+                            value="{{employee.username}}">
+                        <div claas="text-danger" style="color: #FF0000;">
+                            {{employee.userNameError}}
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input type="text" name="email" placeholder="Enter your email" value="{{employee.email}}">
+                        <div claas="text-danger" style="color: #FF0000;">
+                            {{employee.emailError}}
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Phone Number</span>
+                        <input type="number" name="phone" placeholder="Enter your phone number"
+                            value="{{employee.phone}}">
+                        <div claas="text-danger" style="color: #FF0000;">
+                            {{employee.phoneError}}
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Password</span>
+                        <input type="password" name="pwd" placeholder="Enter your password"
+                            value="{{employee.password}}">
+                        <div claas="text-danger" style="color: #FF0000;">
+                            {{employee.pwdError}}
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Confirm Password</span>
+                        <input type="password" name="cpwd" placeholder="Enter your confirm password"
+                            value="{{employee.confirmpassword}}">
+                        <div claas="text-danger" style="color: #FF0000;">
+                            {{employee.cpwdError}}
+                        </div>
+                    </div>
+                </div>
+                <div class="gender-details">
+                    <input type="radio" name="gender" id="dot-1" value="male">
+                    <input type="radio" name="gender" id="dot-2" value="female">
+                    <input type="radio" name="gender" id="dot-3" value="other">
+                    <span class="gender-title">Gender</span>
+                    <div class="category">
+                        <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="gender">Male</span>
+                        </label>
+                        <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="gender">Female</span>
+                        </label>
+                        <label for="dot-3">
+                            <span class="dot three"></span>
+                            <span class="gender">Prefer not to say</span>
+                        </label>
+                    </div>
+                    <div claas="text-danger" style="color: #FF0000;">
+                        {{employee.genderError}}
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Register">
+                </div>
+                <a class="go" style="text-decoration: none;" href="/">Go Home</a>
+            </form>
+        
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>

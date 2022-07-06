@@ -1,0 +1,114 @@
+body {font-family: 'Cambria', serif, Times, serif, Helvetica, sans-serif;
+}
+* {box-sizing: border-box;
+}
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+ 
+  padding: 2px; 
+  margin: 0 0 10px 5px;
+}
+
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.input-field {
+  width:100%;
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #24e945;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  opacity: 0.9;
+  font-size: 14px;
+  border-radius: 5px;
+   box-shadow: 5px 5px 10px #999;
+}
+form{
+    padding: 20px;
+    width:600px;
+    height: 100px;;
+    margin:auto ;
+    
+    
+}
+fieldset{
+  background-color:white;
+  border: 1px solid white;
+  border-radius: 15px;
+  margin-top: 40px;;
+   box-shadow: 5px 5px 10px 5px #999;
+ 
+}
+.btn:hover {
+    background-color: hotpink;
+    color:black;
+  opacity: 1;
+}
+.b{
+     background-color:#17a2b8;
+    color:white;
+    padding: 15px 25px;
+    border: none;
+  cursor: pointer;
+  width: 150px;
+  opacity: 0.9;
+  border-radius: 5px;
+   box-shadow: 5px 5px 10px #999;
+  
+}
+.btn-primary:hover{
+            background-color: blueviolet;
+            color:white;
+            box-shadow: 5px 5px 10px #999;
+        }
+.bttn{
+            background-color: darkorange;
+            color:white;
+          padding: 15px 25px;
+      border: none;
+    cursor: pointer;
+    width: 150px;
+    opacity: 0.9;
+  border-radius: 5px;
+  font-size: 14px;
+            box-shadow: 5px 5px 10px #999;
+        }
+.b:hover{
+    background-color:yellow;
+    color:black
+}
+a{
+    text-decoration: none;
+   
+}
+.form-check, h1{
+  color:#17a2b8;
+}
+.input-box{
+  padding: 10px;
+}
+.font{
+  font-size: 18px;
+}

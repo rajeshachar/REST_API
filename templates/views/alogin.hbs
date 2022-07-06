@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    {{>admin_header}}
+    <title>Admin Login Form</title>
+    <style>
+      a:hover{
+  color:red;
+}
+    </style>
+    
+   </head>
+<body>
+
+  <div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+      <div class="front">
+        <img src="images/login.jpg" alt="">-->
+        <div class="text">
+          <span class="text-1">Every new Employee is a <br> responsible for quality</span>
+          <span class="text-2">Let's get connected</span>
+        </div>
+      </div>
+    </div>
+    <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+                <div class="title">Admin Login</div>
+                    <form action="/alogin" method="POST">
+                        <div class="input-boxes">
+                          <div claas="text-danger" style="color: #FF0000;">
+                                {{employee}}
+                            </div>
+                        <div class="input-box">
+                            <i class="fas fa-envelope"></i>
+                            <input type="text" name="uname" placeholder="Enter your user name">
+                        </div>
+                        <div claas="text-danger" style="color: #FF0000;">
+                                {{emp}}
+                            </div>
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" name="pwd" placeholder="Enter your password" >
+                        </div>
+                        <div claas="text-danger" style="color: #FF0000;">
+                                {{emp}}
+                            </div>
+                        <div class="text"><a href="#">Forgot password?</a></div>
+                        <div class="button input-box">
+                            <input type="submit" value="SignIn">
+                        </div>
+                        <br><a class="go" style="text-decoration: none;" href="/">Go Home</a>
+                        </div>
+                    </form>
+            </div>
+        
+        </div>
+    </div>
+  </div>
+</body>
+</html>
