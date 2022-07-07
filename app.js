@@ -42,6 +42,7 @@ app.use((req, res, next) => {
 
 //Route to Index page
 app.get("/", (req, res) => {
+    //res.writeHead(200,{'Content-Type':'application\json'})
     res.render("index")
 })
 
@@ -52,6 +53,7 @@ app.get("/register", function (req, res) {
 
 //Route to Login page
 app.get("/login", function (req, res) {
+    //res.setHeader(200,{'Content-Type':'application/json'})   
     res.render("login")
 })
 
@@ -83,7 +85,7 @@ function handleValidationError(err, body) {
 //Server side POST method of user Register
 app.post("/register", (req, res) => {
     try {
-
+        //console.log(req.body);
         const password = req.body.pwd
         const cpwd = req.body.cpwd
         const regEmployee = new Register({
@@ -98,7 +100,7 @@ app.post("/register", (req, res) => {
         })
         regEmployee.save((err, doc) => {
             if (!err) {
-                //req.flash('success',"Record Inserted Successfully!!....")                        
+                //req.flash('success',"Record Inserted Successfully!!....")                    
                 res.status(200).redirect("login")
             }
             else {
@@ -127,7 +129,7 @@ app.post("/register", (req, res) => {
 //Server side POST method of user Login
 app.post("/login", async (req, res) => {
     try {
-
+        
         const uname = req.body.uname
         const pwd = req.body.pwd
         if (uname == "" && pwd == "") {
